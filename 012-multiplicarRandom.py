@@ -1,6 +1,7 @@
-# Programa para ...
+# Programa para multiplicar los valores de una tupla por números random
 
-# -------------- IMPORTACIÓN DE MÓDULOS -------------
+# Importacion de modulos
+import random
 
 #---------------- DECLARAR VARIABLES ---------------
 salirPrograma = False
@@ -25,7 +26,7 @@ def verificarTipoDato(datoIngresado, tipoBuscado):
 def continuarSiNo():
     opcionElegida = ''
     while opcionElegida == '':
-        print('Si desea intentar con otro número oprima "s", de lo contrario oprima "n" para salir.')
+        print('Si desea realizar otra prueba oprima "s", de lo contrario oprima "n" para salir.')
         eleccion = input()
         if eleccion == 'N' or eleccion == 'n':
             opcionElegida = True
@@ -38,5 +39,28 @@ def continuarSiNo():
 
 # ------------ EJECUCIÓN PRINCIPAL ----------------
 while salirPrograma == False:
-    pass
-salirPrograma = continuarSiNo()
+    print('Vamos a empezar...\nEstas son las multiplicaciones:\n')
+    # Creación litas y tupla
+    pares = []
+    impares = []
+    numeros = (1,2,3,4,5,6,7,8,9)
+    # Ciclo de multiplicaciones
+    for x in numeros:
+        multiplicador = random.randrange(100)
+        dato = x * multiplicador
+        print(f'{x} x {multiplicador} = {dato}')
+        if dato % 2 == 0:
+            pares.append(dato)
+        else:
+            impares.append(dato)
+    # Imprimir listas al final
+    print("")
+    print('Resultados:')
+    print('-' * 20)
+    print('Pares:')
+    print(f'{pares}')
+    print('-' * 20)
+    print('Impares:')
+    print(f'{impares}')
+    print('-' * 20)
+    salirPrograma = continuarSiNo()
