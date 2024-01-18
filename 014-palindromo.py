@@ -51,6 +51,7 @@ while salirPrograma == False:
     esCadena = verificarTipoDato(palabraOriginal, str)
     if esCadena == True:
         palabra = palabraOriginal.lower()
+        palabra = palabra.replace(' ', '')
         palabraReves = palabra[::-1]
         resultado = comparasionCadenas(palabra, palabraReves)
     else:

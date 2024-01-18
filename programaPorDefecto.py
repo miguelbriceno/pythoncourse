@@ -2,10 +2,8 @@
 
 # -------------- IMPORTACIÓN DE MÓDULOS -------------
 
-#---------------- DECLARAR VARIABLES ---------------
-salirPrograma = False
-
 # --------------- DEFINIR FUNCIONES -----------------
+
 # Funcion 1 - Verificar el tipo de dato para continuar
 def verificarTipoDato(datoIngresado, tipoBuscado):
     tipoDatoIngresado = False
@@ -36,7 +34,16 @@ def continuarSiNo():
             opcionElegida = True
     return opcionElegida
 
-# ------------ EJECUCIÓN PRINCIPAL ----------------
-while salirPrograma == False:
-    pass
-    salirPrograma = continuarSiNo()
+# Funcion 0 - FUNCIÓN PRINCIPAL
+def main():
+    #---------------- DECLARAR VARIABLES ---------------
+    salirPrograma = False
+    #----------------EJECUCIÓN INICIAL------------------
+    while salirPrograma == False:
+        pass
+        salirPrograma = continuarSiNo()
+
+
+# ------------ PUNTO DE ENTRADA DE LA APLICACIÓN ----------------
+if __name__ == '__main__':
+    main()
