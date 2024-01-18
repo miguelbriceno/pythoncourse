@@ -17,4 +17,4 @@ def main():
 
 # ------------ PUNTO DE ENTRADA DE LA APLICACIÓN ----------------
 if __name__ == '__main__':
-    main()
+    main() 
